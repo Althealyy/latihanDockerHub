@@ -1,0 +1,20 @@
+import pandas as pd
+import os
+
+nilai_str = os.getenv('NILAI', '85,90,78,92,88')
+nilai = list(map(int, nilai_str.split(',')))
+
+data = {'Nilai': nilai}
+df = pd.DataFrame(data)
+
+print('--- Analisis Data Menjalankan ---')
+print(f'Rata-rata Nilai: {df["Nilai"].mean()}')
+print('--- Selesai ---')
+
+# buat folder output dulu
+os.makedirs('/app/output', exist_ok=True)
+
+#simpan csv
+df.to_csv('/app/output/hasil.csv', index=False)
+print('Hasil disimpan')
+print('--- Analisis Data Selesai ---')
