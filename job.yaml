@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
       - name: analisis-data
-        image: username/analisis-data-app:v.1.1
+        image: alyayy/analisis-data-app:v.1.1
         env:
         - name: DATA_NILAI
           value: "85,90,78,92,88"

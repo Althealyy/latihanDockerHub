@@ -21,6 +21,6 @@ jobs:
 
     - name: 3. Build dan Push Image ke DockerHub
       run: |
-        DOCKER_REPO="alya/analisis-data-app"
+        DOCKER_REPO="alyayy/analisis-data-app"
         docker build -t $DOCKER_REPO:latest .
         docker push $DOCKER_REPO:latest
